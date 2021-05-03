@@ -5,9 +5,9 @@ a.fig = figure('numbertitle','off','name','Graph a Function'); %%this calls a GU
 
 %%the following 3 lines create 3 textboxes, one that says 'f(x) = x^a', the
 %%value of a, and 'a = ', respectively
-a.func = uicontrol('style','text','units','normalized','position', [.034 .78 .09 .095],'string','f(x) = x^a','horizontalalignment','right');
-a.num = uicontrol('style','text','units','normalized','position', [.05 .78 .09 .05],'string',num2str(a.val),'horizontalalignment','right');
-a.yIs = uicontrol('style','text','units','normalized','position', [.01 .78 .09 .05],'string','a = ','horizontalalignment','right');
+a.func = uicontrol('style','text','units','normalized','position', [.0 .78 .08 .095],'string','f(x) = x^a','horizontalalignment','right');
+a.num = uicontrol('style','text','units','normalized','position', [.03 .76 .04 .05],'string',num2str(a.val),'horizontalalignment','right');
+a.yIs = uicontrol('style','text','units','normalized','position', [.0 .76 .05 .05],'string','a = ','horizontalalignment','right');
 
 %%the following 3 lines create 3 buttons, one to add 1 to a, one to
 %%subtract one from a, and one to refresh the plot, respectively
@@ -40,7 +40,7 @@ a.num.String = num2str(a.val);
 
 end
 
-function [] = makePlot()
+function [] = makePlot(source, event)
 %%this function is called both in the master function to begin with and
 %%whenever a user presses the button 'Refresh Plot.' It updates the plot
 %%whenever a new desired value of a has been selected. 
