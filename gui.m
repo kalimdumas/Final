@@ -41,6 +41,8 @@ a.num.String = num2str(a.val);
 end
 
 function [] = makePlot(source, event)
+%%this function creates a plot from x = -5 to 5, inclusive and plots f(x)
+%%for each value.
 %%this function is called both in the master function to begin with and
 %%whenever a user presses the button 'Refresh Plot.' It updates the plot
 %%whenever a new desired value of a has been selected. 
